@@ -23,7 +23,12 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.jsx?$/,
-            loader: "react-hot!babel",
+            loader: "react-hot!babel?" + JSON.stringify({
+                plugins: [
+                    ['import', [{ libraryName: "antd", style: 'css' }]],
+                ],
+                cacheDirectory: true
+            }),
             include: path.join(__dirname, 'src/')
         }, {
             test: /\.less$/,
