@@ -1,0 +1,87 @@
+@lesson-line-dot-radius: 10px;
+@lesson-line-dot-radius-active: 16px;
+@lesson-line-info-size: 12px;
+@lesson-line-info-size-active: 14px;
+.lesson-line {
+    padding: 18px 10px 0 10px;
+    background-color: white;
+    max-width: 810px;
+    height: 200px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    .locator {
+        width: 132px;
+        padding: 0 12px;
+        text-align: center;
+        color: @coral-pink;
+        position: relative;
+        top: 16px;
+        z-index: 3;
+        left: 0;
+        p {
+            margin: -4px 0 4px 0;
+        }
+        .anticon {
+            font-size: 22px;
+        }
+    }
+    .lesson-axis {
+        top: 12px;
+        position: relative;
+        width: 132px;
+        height: 4px;
+        background-image: -webkit-linear-gradient(left, @seafoam-blue, @cool-blue);
+        background-image: -o-linear-gradient(left, @seafoam-blue, @cool-blue);
+        background-image: linear-gradient(to right, @seafoam-blue, @cool-blue);
+        z-index: 0;
+        margin: 0 66px;
+    }
+    .lesson-item {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        width: 132px;
+        cursor: pointer;
+        .lesson-dot {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: @lesson-line-dot-radius;
+            height: @lesson-line-dot-radius;
+            border: 2px solid @cool-blue;
+            border-radius: @lesson-line-dot-radius;
+            background-color: white;
+            z-index: 1;
+            transition: transform .2s ease-in;
+        }
+        .lesson-info {
+            padding: 14px 12px;
+            font-size: @lesson-line-info-size;
+            white-space: normal;
+            transition: transform .2s ease-in;
+        }
+        &.active {
+            cursor: default;
+            .lesson-dot {
+                transform: scale(1.5);
+                border: 2px solid @coral-pink;
+            }
+            .lesson-info {
+                color: @coral-pink;
+                transform: scale(1.1);
+            }
+        }
+        &.disabled {
+            cursor: default;
+        }
+        &:not(.active):not(.disabled):hover {
+            .lesson-dot {
+                transform: scale(1.5);
+            }
+            .lesson-info {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

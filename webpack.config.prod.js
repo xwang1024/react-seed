@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const config = require("./webpack.config.dev");
 
 config.entry =  {
-    vendor: [ "babel-polyfill" ],
+    vendor: [ "whatwg-fetch", "babel-polyfill" ],
     app: ["./index.js", "./index.html" ]
 },
 

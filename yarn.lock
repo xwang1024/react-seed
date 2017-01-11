@@ -2884,6 +2884,10 @@ object-assign@4.1.0, object-assign@4.x, object-assign@^4.0.1, object-assign@^4.1
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
 
+object-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
+
 object-component@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/object-component/-/object-component-0.0.3.tgz#f0c69aa50efc95b866c186f400a33769cb2f1291"
@@ -3700,6 +3704,13 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
+react-datetime@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.8.2.tgz#b1f950ac27bbca65542fb2bfa1ae2c577db2b984"
+  dependencies:
+    object-assign "^3.0.0"
+    react-onclickoutside "^4.1.0"
+
 react-dom@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.1.tgz#d54c913261aaedb17adc20410d029dcc18a1344a"
@@ -3739,6 +3750,12 @@ react-lazy-load@^3.0.10:
     lodash.debounce "^4.0.0"
     lodash.throttle "^4.0.0"
 
+react-onclickoutside@^4.1.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-4.9.0.tgz#2908c3136e244102bea5e5437a838a528d5d2995"
+  dependencies:
+    object-assign "^4.0.1"
+
 react-resizable@^1.4.2:
   version "1.4.6"
   resolved "https://registry.yarnpkg.com/react-resizable/-/react-resizable-1.4.6.tgz#2cdc2186606f3a564444ecd4cfea7f400301a3ea"
@@ -3763,7 +3780,7 @@ react-router@^3.0.0:
     loose-envify "^1.2.0"
     warning "^3.0.0"
 
-react-slick@~0.14.2:
+react-slick@^0.14.5, react-slick@~0.14.2:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.14.5.tgz#29e2e2d73653a786ac38de379c6e6f27ffa0b029"
   dependencies:
@@ -4598,7 +4615,7 @@ weinre@^2.0.0-pre-I0Z7U9OV:
     nopt "3.0.x"
     underscore "1.7.x"
 
-whatwg-fetch@>=0.10.0:
+whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.1.tgz#078b9461bbe91cea73cbce8bb122a05f9e92b772"
 

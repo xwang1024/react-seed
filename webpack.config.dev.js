@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     context: path.resolve("./src"),
     entry: {
-        vendor: [ "babel-polyfill" ],
+        vendor: [ "whatwg-fetch", "babel-polyfill" ],
         app: [ "webpack/hot/dev-server", "webpack-hot-middleware/client", "./index.js", "./index.html" ]
     },
     output: {
